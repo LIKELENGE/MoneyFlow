@@ -1,0 +1,66 @@
+# Fichiers Python générés
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+dist/
+build/
+sdist/
+
+# Fichiers spécifiques à l'environnement
+.env
+venv/
+env/
+instance/  # Dossier pour les fichiers spécifiques à l'instance (par exemple, config.sqlite)
+
+# Fichiers de données
+*.sqlite
+*.db
+
+# Fichiers temporaires et journaux
+tmp/
+logs/
+*.log
+*.pid
+
+# Fichiers d'éditeurs et d'IDE spécifiques
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store  # Fichiers macOS Desktop Services Store
+
+# Fichiers de distribution
+*.whl
+
+# Dépendances installées
+/lib/
+/lib64/
+/parts/
+/sre_compile_cache/
+/sre_parse_cache/
+__pypackages__/
+_build/
+conda-bld/
+pkgs/
+
+# Fichiers de documentation générés
+docs/_build/
+
+# Fichiers de couverture de test
+.coverage
+coverage.xml
+htmlcov/
+.pytest_cache/
+
+# Autres fichiers temporaires
+*.dump
+*.fcgiwrap
+*.sock
+
+# Dossier statique compilé (si vous utilisez des outils comme Webpack ou Parcel)
+static/build/
+
+# Si vous utilisez des migrations Alembic
+versions/
