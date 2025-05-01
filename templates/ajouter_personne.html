@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajouter une personne</title>
+</head>
+<body>
+    <h1>Ajouter une nouvelle personne</h1>
+    <form method="POST" action="/ajouter_personne">
+        <div>
+            <label for="nom">Nom:</label>
+            <input type="text" id="nom" name="nom" required>
+        </div>
+        <br>
+        <div>
+            <label for="prenom">Prénom:</label>
+            <input type="text" id="prenom" name="prenom" required>
+        </div>
+        <br>
+        <div>
+            <label for="mail">Email:</label>
+            <input type="email" id="mail" name="mail" required>
+        </div>
+        <br>
+        <div>
+            <label for="sexe">Sexe:</label>
+            <select id="sexe" name="sexe" required>
+                <option value="">Sélectionner</option>
+                <option value="M">Masculin</option>
+                <option value="F">Féminin</option>
+                <option value="Autre">Autre</option>
+            </select>
+        </div>
+        <br>
+        <div>
+            <label for="date_naissance">Date de naissance:</label>
+            <input type="date" id="date_naissance" name="date_naissance" required>
+        </div>
+        <br>
+        <button type="submit">Ajouter la personne</button>
+    </form>
+</body>
+</html>
