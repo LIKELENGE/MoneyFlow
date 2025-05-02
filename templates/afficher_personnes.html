@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Liste des personnes</title>
+</head>
+<body>
+    <h1>Liste des personnes</h1>
+    <ul>
+        {% for personne in personnes %}
+            <li>
+            <a href="/personne/{{ personne.mail }}">{{ personne.mail }}</a> -
+                    Nom: {{ personne.nom }}, 
+                    Prénom: {{ personne.prenom }},
+                    Email: {{ personne.mail }}
+            </a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

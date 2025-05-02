@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Détails de la personne</title>
+</head>
+<body>
+    <h1>Détails de la personne</h1>
+    {% if personne %}
+        <p><strong>Nom:</strong> {{ personne.nom }}</p>
+        <p><strong>Prénom:</strong> {{ personne.prenom }}</p>
+        <p><strong>Email:</strong> {{ personne.mail }}</p>
+
+        {% if personne.depenses %}
+            <h2>Dépenses :</h2>
+            <ul>
+                {% for depense in personne.depenses %}
+                    <li>{{ depense }}</li>  {% endfor %}
+            </ul>
+        {% else %}
+            <p>Cette personne n'a pas de dépenses enregistrées.</p>
+        {% endif %}
+        {% if personne.revenus %}
+            <h2>Revenus :</h2>
+            <ul>
+                {% for revenu in personne.revenus %}
+                    <li>{{ revenu }}</li>  {% endfor %}
+            </ul>
+        {% else %}
+            <p>Cette personne n'a pas de dépenses enregistrées.</p>
+        {% endif %}
+
+        <p><a href="/personnes">Retour à la liste</a></p>
+        <p><a href="">Ajouter depense</a></p>
+        <p><a href="">Ajouter Revenu</a></p>
+        <p><a href="">Modifier personne</a></p>
+        <p><a href="">Supprimer personne</a></p>
+    {% else %}
+        <p>Personne non trouvée.</p>
+    {% endif %}
+</body>
+</html>
