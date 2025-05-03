@@ -1,12 +1,15 @@
 from flask import Blueprint, request, jsonify, render_template
 from views.personne_view import ajouter_personne, afficher_liste_personnes, afficher_personne_par_mail
+from views.personne_view import ajouter_depense
+from models.depense import Depense
+
 ajouter_personne_bp = Blueprint('ajouter_personne', __name__)
 afficher_personnes_bp = Blueprint('afficher_personnes', __name__)
-afficher_personne_par_mail_bp = Blueprint('afficher_personne', __name__)
+afficher_personne_par_mail_bp = Blueprint('afficher_personne_par_mail', __name__)  # 🔧 Nom corrigé ici
+ajouter_depense_bp = Blueprint('ajouter_depense', __name__)
 
 @ajouter_personne_bp.route('/ajouter_personne', methods=['GET'])
 def afficher_formulaire_ajouter_personne():
-    """Affiche le formulaire pour ajouter une personne."""
     return render_template('ajouter_personne.html')
 
 @ajouter_personne_bp.route('/ajouter_personne', methods=['POST'])
@@ -41,11 +44,29 @@ def afficher_personne(mail):
     else:
         print("Personne non trouvée.")
         return jsonify({"error": "Personne non trouvée"}), 404
+    
+@ajouter_depense_bp.route('/personne/<mail>', methods=['POST'])
+def ajouter_depense_route(mail):
+    try:
+        data = request.form  # Utilisé pour form HTML
+        montant = data['montant']
+        date = data['date']
+        description = data['description']
+        depense = Depense(montant, date, description)
+        ajouter_depense(mail, depense)
 
-def get_personne_par_mail(mail):
-    """Récupère une personne par son adresse e-mail."""
-    personnes = afficher_liste_personnes
-    for personne in personnes:
-        if personne["mail"] == mail:
-            return personne
-    return None
+        personne = afficher_personne_par_mail(mail)
+        return render_template("afficher_personne.html", personne=personne, message="Dépense ajoutée avec succès")
+    except KeyError as e:
+        return f"Erreur : champ manquant {str(e)}", 400
+
+
+
+
+# def get_personne_par_mail(mail):
+#     """Récupère une personne par son adresse e-mail."""
+#     personnes = afficher_liste_personnes
+#     for personne in personnes:
+#         if personne["mail"] == mail:
+#             return personne
+#     return None

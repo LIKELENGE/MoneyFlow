@@ -2,9 +2,11 @@
 <html>
 <head>
     <title>Détails de la personne</title>
+    <meta charset="UTF-8">
 </head>
 <body>
     <h1>Détails de la personne</h1>
+
     {% if personne %}
         <p><strong>Nom:</strong> {{ personne.nom }}</p>
         <p><strong>Prénom:</strong> {{ personne.prenom }}</p>
@@ -14,26 +16,45 @@
             <h2>Dépenses :</h2>
             <ul>
                 {% for depense in personne.depenses %}
-                    <li>{{ depense }}</li>  {% endfor %}
-            </ul>
-        {% else %}
-            <p>Cette personne n'a pas de dépenses enregistrées.</p>
-        {% endif %}
-        {% if personne.revenus %}
-            <h2>Revenus :</h2>
-            <ul>
-                {% for revenu in personne.revenus %}
-                    <li>{{ revenu }}</li>  {% endfor %}
+                    <li>{{ depense.date }} - {{ depense.montant }} € : {{ depense.description }}</li>
+                {% endfor %}
             </ul>
         {% else %}
             <p>Cette personne n'a pas de dépenses enregistrées.</p>
         {% endif %}
 
-        <p><a href="/personnes">Retour à la liste</a></p>
-        <p><a href="">Ajouter depense</a></p>
-        <p><a href="">Ajouter Revenu</a></p>
-        <p><a href="">Modifier personne</a></p>
-        <p><a href="">Supprimer personne</a></p>
+        {% if personne.revenus %}
+            <h2>Revenus :</h2>
+            <ul>
+                {% for revenu in personne.revenus %}
+                    <li>{{ revenu.date }} - {{ revenu.montant }} € : {{ revenu.description }}</li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>Cette personne n'a pas de revenus enregistrés.</p>
+        {% endif %}
+
+        <h2>Ajouter une dépense</h2>
+        <form action="/personne/{{ personne.mail }}" method="post">
+            <label>Montant :</label>
+            <input type="number" name="montant" required><br>
+
+            <label>Date :</label>
+            <input type="date" name="date" required><br>
+
+            <label>Description :</label>
+            <input type="text" name="description" required><br>
+
+            <button type="submit">Ajouter</button>
+        </form>
+
+
+
+        <p><a href="/afficher_personnes">Retour à la liste</a></p>
+        <p><a href="#">Ajouter revenu</a></p>
+        <p><a href="#">Modifier personne</a></p>
+        <p><a href="#">Supprimer personne</a></p>
+
     {% else %}
         <p>Personne non trouvée.</p>
     {% endif %}

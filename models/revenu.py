@@ -1,4 +1,4 @@
-from transaction import Transaction
+from .transaction import Transaction
 
 class Revenu(Transaction):
     def __init__(self, montant, date, description):

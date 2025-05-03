@@ -25,8 +25,3 @@ def ChargerPersonnes():
     except json.JSONDecodeError:
         print(f"Erreur de décodage JSON dans le fichier '{nom_fichier}'.")
         return []
-
-# Test simple
-personnes = ChargerPersonnes()
-for p in personnes:
-    print(p)
