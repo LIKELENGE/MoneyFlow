@@ -135,5 +135,26 @@
         "mp": "jackbauer@gmail.com",
         "depenses": [],
         "revenus": []
+    },
+    {
+        "nom": "TOTO",
+        "prenom": "joe",
+        "mail": "tjoe@gmail.com",
+        "sexe": "F",
+        "date_naissance": "1990-05-10",
+        "mp": "tjoe@gmail.com",
+        "depenses": [],
+        "revenus": [
+            {
+                "montant": "10000",
+                "date": "2025-05-04",
+                "description": "Revenu initial"
+            },
+            {
+                "montant": "10000",
+                "date": "2025-05-04",
+                "description": "Revenu initial"
+            }
+        ]
     }
 ]

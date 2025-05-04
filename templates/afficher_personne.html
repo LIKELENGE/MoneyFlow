@@ -74,7 +74,6 @@
         </form>
 
         <div class="mt-4">
-            <a href="/ajouter_revenu/{{ personne.mail }}" class="btn btn-success">Ajouter revenu</a>
             <a href="/modifier_personne/{{ personne.mail }}" class="btn btn-warning">Modifier personne</a>
 
             <form action="/supprimer_personne/{{ personne.mail }}" method="post" class="d-inline-block" onsubmit="return confirm('Êtes-vous sûr de vouloir supprimer cette personne ?');">
