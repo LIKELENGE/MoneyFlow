@@ -2,12 +2,13 @@ from .revenu import Revenu
 from .depense import Depense
 
 class Personne:
-    def __init__(self, nom, prenom, mail, sexe, date_naissance, depenses=None, revenus=None):
+    def __init__(self, nom, prenom, mail, sexe, date_naissance, mp, depenses=None, revenus=None):
         self.mail = mail
         self.nom = nom
         self.prenom = prenom
         self.sexe = sexe
         self.date_naissance = date_naissance
+        self.mp = mp
         self.depenses = depenses if depenses is not None else []
         self.revenus = revenus if revenus is not None else []
 
@@ -38,6 +39,7 @@ class Personne:
             'mail': self.mail,
             'sexe': self.sexe,
             'date_naissance': self.date_naissance,
+            'mp': self.mp,
             'depenses': [dep.to_dict() for dep in self.depenses],
             'revenus': [rev.to_dict() for rev in self.revenus]
         }
@@ -51,5 +53,9 @@ class Personne:
             mail=data['mail'],
             sexe=data['sexe'],
             date_naissance=data['date_naissance'],
+            mp=data['mp'],
             depenses=depenses,
             revenus=revenus)
+    
+    def verifier_mp(self, mp):
+        return self.mp == mp

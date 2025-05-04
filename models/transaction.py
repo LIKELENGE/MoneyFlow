@@ -20,6 +20,12 @@ class Transaction:
             date=data['date'],
             description=data['description']
         )
+    def afficher_tansaction_par_mois(self, mois, annee):
+        #par defaut il prend le mois et l'année en cours
+        """Affiche les transactions d'un mois et d'une année donnés."""
+        date_obj = datetime.strptime(self.date, '%Y-%m-%d')
+        return date_obj.month == mois and date_obj.year == annee
+    
     def __str__(self):
         return f"Transaction(montant={self.montant}, date={self.date}, description='{self.description}')"
     def __repr__(self):

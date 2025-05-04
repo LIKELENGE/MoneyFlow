@@ -1,238 +1,32 @@
 [
     {
-        "nom": "Moreau",
-        "prenom": "Sophie",
-        "mail": "sophie.moreau@example.com",
-        "sexe": "X",
-        "date_naissance": "2000-01-29",
-        "depenses": [
-            {
-                "montant": 153.24,
-                "date": "2025-07-18",
-                "description": "Shopping"
-            },
-            {
-                "montant": 216.44,
-                "date": "2025-03-22",
-                "description": "Restaurant"
-            },
-            {
-                "montant": 468.96,
-                "date": "2024-05-13",
-                "description": "Restaurant"
-            },
-            {
-                "montant": 108.94,
-                "date": "2024-08-14",
-                "description": "Shopping"
-            },
-            {
-                "montant": "100",
-                "date": "2025-05-02",
-                "description": "test"
-            },
-            {
-                "montant": "250",
-                "date": "2025-05-02",
-                "description": "test"
-            },
-            {
-                "montant": "250",
-                "date": "2025-05-02",
-                "description": "test"
-            },
-            {
-                "montant": "450",
-                "date": "2025-05-02",
-                "description": "test"
-            },
-            {
-                "montant": "144",
-                "date": "2025-05-03",
-                "description": "test"
-            },
-            {
-                "montant": "123",
-                "date": "2025-05-03",
-                "description": "test"
-            },
-            {
-                "montant": "123",
-                "date": "2025-05-03",
-                "description": "test"
-            }
-        ],
-        "revenus": [
-            {
-                "montant": 744.64,
-                "date": "2025-09-17",
-                "description": "Prime"
-            },
-            {
-                "montant": 467.51,
-                "date": "2025-09-25",
-                "description": "Salaire"
-            },
-            {
-                "montant": 2480.69,
-                "date": "2024-03-21",
-                "description": "Allocation"
-            }
-        ]
-    },
-    {
-        "nom": "Dubois",
-        "prenom": "Nathalie",
-        "mail": "nathalie.dubois@example.com",
-        "sexe": "F",
-        "date_naissance": "1986-05-11",
-        "depenses": [
-            {
-                "montant": 211.37,
-                "date": "2025-09-28",
-                "description": "Loisirs"
-            },
-            {
-                "montant": 431.55,
-                "date": "2024-07-07",
-                "description": "Shopping"
-            },
-            {
-                "montant": 419.98,
-                "date": "2025-05-24",
-                "description": "Loyer"
-            },
-            {
-                "montant": 53.2,
-                "date": "2025-01-25",
-                "description": "Restaurant"
-            }
-        ],
-        "revenus": [
-            {
-                "montant": 2955.68,
-                "date": "2024-02-19",
-                "description": "Prime"
-            },
-            {
-                "montant": 2439.28,
-                "date": "2024-01-01",
-                "description": "Salaire"
-            },
-            {
-                "montant": 2725.98,
-                "date": "2024-06-23",
-                "description": "Remboursement"
-            },
-            {
-                "montant": 1232.67,
-                "date": "2025-05-06",
-                "description": "Allocation"
-            }
-        ]
-    },
-    {
-        "nom": "Garcia",
-        "prenom": "Michel",
-        "mail": "michel.garcia@work.net",
-        "sexe": "X",
-        "date_naissance": "1980-04-26",
-        "depenses": [
-            {
-                "montant": 220.93,
-                "date": "2024-12-30",
-                "description": "Loyer"
-            },
-            {
-                "montant": 450.38,
-                "date": "2024-01-04",
-                "description": "Shopping"
-            },
-            {
-                "montant": 185.46,
-                "date": "2025-11-16",
-                "description": "Transport"
-            },
-            {
-                "montant": 206.52,
-                "date": "2025-05-04",
-                "description": "Loisirs"
-            },
-            {
-                "montant": 76.11,
-                "date": "2025-05-26",
-                "description": "Courses"
-            },
-            {
-                "montant": 347.38,
-                "date": "2024-01-03",
-                "description": "Courses"
-            },
-            {
-                "montant": 308.55,
-                "date": "2024-04-29",
-                "description": "Transport"
-            }
-        ],
-        "revenus": [
-            {
-                "montant": 1640.71,
-                "date": "2024-08-29",
-                "description": "Remboursement"
-            },
-            {
-                "montant": 2744.6,
-                "date": "2024-03-30",
-                "description": "Prime"
-            },
-            {
-                "montant": 1626.29,
-                "date": "2025-06-26",
-                "description": "Allocation"
-            },
-            {
-                "montant": 1072.61,
-                "date": "2025-02-10",
-                "description": "Int\u00e9r\u00eats"
-            },
-            {
-                "montant": 2419.4,
-                "date": "2024-08-24",
-                "description": "Prime"
-            }
-        ]
-    },
-    {
-        "nom": "Doe",
-        "prenom": "John",
-        "mail": "john.doe@example.com",
-        "sexe": "Homme",
-        "date_naissance": "1990-01-01",
-        "depenses": [],
-        "revenus": []
-    },
-    {
-        "nom": "Doe",
-        "prenom": "Jonny",
-        "mail": "jonny.doe@example.com",
-        "sexe": "Homme",
-        "date_naissance": "1990-01-01",
-        "depenses": [],
-        "revenus": []
-    },
-    {
-        "nom": "test",
-        "prenom": "test",
-        "mail": "test@test.com",
+        "nom": "john",
+        "prenom": "doe",
+        "mail": "johndoe@gmail.com",
         "sexe": "M",
-        "date_naissance": "1991-10-28",
-        "depenses": [
-            {
-                "montant": "125",
-                "date": "2025-05-03",
-                "description": "test"
-            }
-        ],
+        "date_naissance": "1985-10-28",
+        "mp": "test",
+        "depenses": [],
+        "revenus": []
+    },
+    {
+        "nom": "BAUER",
+        "prenom": "JACK",
+        "mail": "jbauer@gmail.com",
+        "sexe": "M",
+        "date_naissance": "1960-10-20",
+        "mp": "jbauer@gmail.com",
+        "depenses": [],
+        "revenus": []
+    },
+    {
+        "nom": "Almeda",
+        "prenom": "tony",
+        "mail": "tonyalmeda@gmail.com",
+        "sexe": "M",
+        "date_naissance": "1965-05-22",
+        "mp": "tonyalmeda@gmail.com",
+        "depenses": [],
         "revenus": []
     }
 ]

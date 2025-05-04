@@ -3,37 +3,30 @@
 {% block title %}Accueil - MoneyFlow{% endblock %}
 
 {% block content %}
-<div class="text-center py-5 bg-primary text-white rounded shadow-sm">
-    <h1 class="display-4">Bienvenue sur MoneyFlow</h1>
-    <p class="lead">Votre outil simple et intuitif pour suivre vos revenus et dépenses.</p>
-    <a href="/ajouter_personne" class="btn btn-light btn-lg mt-3">Commencer</a>
-</div>
-
-<div class="row mt-5">
-    <div class="col-md-4">
-        <div class="card shadow-sm h-100">
-            <div class="card-body">
-                <h5 class="card-title">Ajouter une personne</h5>
-                <p class="card-text">Créez un nouveau profil pour suivre ses transactions financières.</p>
-                <a href="/ajouter_personne" class="btn btn-primary">Ajouter</a>
+<div class="row justify-content-center mt-5">
+    <div class="col-md-6">
+        <div class="card shadow">
+            <div class="card-header bg-dark text-white">
+                <h5 class="mb-0">Connexion à MoneyFlow</h5>
             </div>
-        </div>
-    </div>
-    <div class="col-md-4">
-        <div class="card shadow-sm h-100">
             <div class="card-body">
-                <h5 class="card-title">Voir les personnes</h5>
-                <p class="card-text">Affichez la liste complète des profils enregistrés.</p>
-                <a href="/afficher_personnes" class="btn btn-success">Voir</a>
-            </div>
-        </div>
-    </div>
-    <div class="col-md-4">
-        <div class="card shadow-sm h-100">
-            <div class="card-body">
-                <h5 class="card-title">Analyse financière</h5>
-                <p class="card-text">Visualisez vos finances. (Fonctionnalité à venir)</p>
-                <button class="btn btn-secondary" disabled>À venir</button>
+                <form method="POST" action="/verifier_mp">
+                    <div class="mb-3">
+                        <label for="mail" class="form-label">Adresse email</label>
+                        <input type="email" class="form-control" id="mail" name="mail" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="mp" class="form-label">Mot de passe</label>
+                        <input type="password" class="form-control" id="mp" name="mp" required>
+                    </div>
+                    <div class="d-grid mb-2">
+                        <button type="submit" class="btn btn-primary">Se connecter</button>
+                    </div>
+                </form>
+                <div class="text-center">
+                    <span>Pas encore de compte ?</span>
+                    <a href="/ajouter_personne" class="btn btn-link">S'inscrire</a>
+                </div>
             </div>
         </div>
     </div>

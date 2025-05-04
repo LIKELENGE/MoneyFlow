@@ -6,10 +6,6 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from models.personne import Personne
 
 def EcrirePersonnes(personnes):
-    """
-    Sauvegarde une liste de Personne dans le fichier JSON.
-    :param personnes: Liste d'objets Personne
-    """
     nom_fichier = "personnes.json"
     try:
         with open(nom_fichier, 'w') as f:
