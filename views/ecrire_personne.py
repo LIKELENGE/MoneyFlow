@@ -11,6 +11,5 @@ def EcrirePersonnes(personnes):
         with open(nom_fichier, 'w') as f:
             data = [p.to_dict() for p in personnes]
             json.dump(data, f, indent=4)
-            print(f"{len(personnes)} personnes enregistrées avec succès dans '{nom_fichier}'.")
     except Exception as e:
         print(f"Erreur lors de l'écriture du fichier '{nom_fichier}': {e}")
