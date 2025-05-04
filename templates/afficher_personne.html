@@ -37,8 +37,16 @@
             <p>Aucun revenu enregistré pour cette personne.</p>
         {% endif %}
 
+        <div class="mb-4">
+            <h3>Résumé financier</h3>
+            <p><strong>Total des revenus :</strong> {{ personne.total_revenus }} €</p>
+            <p><strong>Total des dépenses :</strong> {{ personne.total_depenses }} €</p>
+            <p><strong>Solde :</strong> {{ personne.total_revenus - personne.total_depenses }} €</p>
+        </div>
+
         <h3>Ajouter une transaction</h3>
         <form action="/personne/{{ personne.mail }}" method="post">
+        
             <div class="mb-3">
                 <label for="montant" class="form-label">Montant</label>
                 <input type="number" class="form-control" id="montant" name="montant" required>
@@ -66,7 +74,6 @@
         </form>
 
         <div class="mt-4">
-        
             <a href="/ajouter_revenu/{{ personne.mail }}" class="btn btn-success">Ajouter revenu</a>
             <a href="/modifier_personne/{{ personne.mail }}" class="btn btn-warning">Modifier personne</a>
 

@@ -1,3 +1,4 @@
+import bcrypt
 from flask import Blueprint, request, jsonify, render_template, redirect, url_for
 from views.personne_view import ajouter_personne, afficher_liste_personnes, afficher_personne_par_mail, modifier_personne, supprimer_personne, verifier_mp
 from views.personne_view import ajouter_depense, ajouter_revenu
@@ -47,12 +48,13 @@ def ajouter_personne_route():
         return render_template("ajouter_personne.html", error=f"Erreur interne : {str(e)}")
 
 
+
 @verifier_mp_bp.route('/verifier_mp', methods=['POST'])
 def verifier_mp_route():
     try:
         data = request.form
-        mail = data['mail']
         mp = data['mp']
+        mail = data['mail']
         personne = verifier_mp(mail, mp)
         return render_template('afficher_personne.html', personne=personne)
     except KeyError as e:
@@ -67,7 +69,7 @@ def verifier_mp_route():
 @modifier_personne_bp.route('/modifier_personne/<mail>', methods=['POST'])
 def modifier_personne_route(mail):
     try:
-        data = request.form  # Utilisé pour form HTML
+        data = request.form
         nom = data.get('nom')
         prenom = data.get('prenom')
         sexe = data.get('sexe')
@@ -111,7 +113,7 @@ def afficher_personne(mail):
         return jsonify({"error": "Personne non trouvée"}), 404
     
 @ajouter_transaction_bp.route('/personne/<mail>', methods=['POST'])
-def ajouter_depense_route(mail):
+def ajouter_transaction_route(mail):
     try:
         data = request.form
         montant = data['montant']

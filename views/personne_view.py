@@ -59,17 +59,21 @@ def afficher_personne_par_mail(mail):
     return None
 
 def ajouter_depense(mail, depense):
+    global liste_personnes
     personne = afficher_personne_par_mail(mail)
     if personne:
         personne.ajouter_depense(depense)
         EcrirePersonnes(liste_personnes)
+        liste_personnes = ChargerPersonnes()
     else:
         raise ValueError("Personne non trouvée.")
 
 def ajouter_revenu(mail, revenu):
+    global liste_personnes
     personne = afficher_personne_par_mail(mail)
     if personne:
         personne.ajouter_revenu(revenu)
         EcrirePersonnes(liste_personnes)
+        liste_personnes = ChargerPersonnes()
     else:
         raise ValueError("Personne non trouvée.")
