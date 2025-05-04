@@ -1,3 +1,4 @@
+import bcrypt
 from .revenu import Revenu
 from .depense import Depense
 
@@ -8,9 +9,29 @@ class Personne:
         self.prenom = prenom
         self.sexe = sexe
         self.date_naissance = date_naissance
-        self.mp = mp
+        self.mp = self.crypter_mp(mp)
         self.depenses = depenses if depenses is not None else []
         self.revenus = revenus if revenus is not None else []
+        self.total_revenus = self.calculer_total_revenus()
+        self.total_depenses = self.calculer_total_depenses()
+    
+    def crypter_mp(self, password):
+        return bcrypt.hashpw(password.encode('utf-8'), bcrypt.gensalt()).decode('utf-8')
+
+    def verifier_mp(self, mp):
+        return bcrypt.checkpw(mp.encode('utf-8'), self.mp.encode('utf-8'))
+        
+    
+    def calculer_total_revenus(self):
+        return sum(revenu.montant for revenu in self.revenus) if self.revenus else 0
+
+    def calculer_total_depenses(self):
+        return sum(depense.montant for depense in self.depenses) if self.depenses else 0
+
+    @property
+    def solde(self):
+        return self.total_revenus - self.total_depenses
+
 
     def ajouter_depense(self, depense):
         self.depenses.append(depense)

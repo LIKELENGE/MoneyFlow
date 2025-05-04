@@ -1,31 +1,11 @@
 [
     {
-        "nom": "john",
-        "prenom": "doe",
+        "nom": "DOE",
+        "prenom": "John",
         "mail": "johndoe@gmail.com",
         "sexe": "M",
-        "date_naissance": "1985-10-28",
-        "mp": "test",
-        "depenses": [],
-        "revenus": []
-    },
-    {
-        "nom": "BAUER",
-        "prenom": "JACK",
-        "mail": "jbauer@gmail.com",
-        "sexe": "M",
-        "date_naissance": "1960-10-20",
-        "mp": "jbauer@gmail.com",
-        "depenses": [],
-        "revenus": []
-    },
-    {
-        "nom": "Almeda",
-        "prenom": "tony",
-        "mail": "tonyalmeda@gmail.com",
-        "sexe": "M",
-        "date_naissance": "1965-05-22",
-        "mp": "tonyalmeda@gmail.com",
+        "date_naissance": "1991-10-08",
+        "mp": "$2b$12$WidPBxFi3EITrRKqkIPLS.KDfBUlNZAzEcMwvr.Jp6T5HVw3ul6ai",
         "depenses": [],
         "revenus": []
     }
