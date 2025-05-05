@@ -119,16 +119,19 @@ def ajouter_transaction_route(mail):
         montant = data['montant']
         date = data['date']
         description = data['description']
-        depense = Depense(montant, date, description)
+        categorie = data.get('categorie', "inconnu")
         type_transaction = data['type_transaction']
+
         if type_transaction == "revenu":
-            revenu = Revenu(montant, date, description)
-            ajouter_revenu(mail, revenu)
+            transaction = Revenu(montant, date, description, categorie)
+            ajouter_revenu(mail, transaction)
         else:
-            depense = Depense(montant, date, description)
-            ajouter_depense(mail, depense)
+            transaction = Depense(montant, date, description, categorie)
+            ajouter_depense(mail, transaction)
 
         personne = afficher_personne_par_mail(mail)
-        return render_template("afficher_personne.html", personne=personne, message="Dépense ajoutée avec succès")
+        return render_template("afficher_personne.html", personne=personne, message="Transaction ajoutée avec succès")
+
     except KeyError as e:
         return f"Erreur : champ manquant {str(e)}", 400
+

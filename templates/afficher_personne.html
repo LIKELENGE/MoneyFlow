@@ -46,18 +46,25 @@
 
         <h3>Ajouter une transaction</h3>
         <form action="/personne/{{ personne.mail }}" method="post">
-        
+
             <div class="mb-3">
                 <label for="montant" class="form-label">Montant</label>
                 <input type="number" class="form-control" id="montant" name="montant" required>
             </div>
+            
             <div class="mb-3">
                 <label for="date" class="form-label">Date</label>
                 <input type="date" class="form-control" id="date" name="date" required>
             </div>
+            
             <div class="mb-3">
                 <label for="description" class="form-label">Description</label>
                 <input type="text" class="form-control" id="description" name="description" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="categorie" class="form-label">Catégorie (optionnel)</label>
+                <input type="text" class="form-control" id="categorie" name="categorie">
             </div>
 
             <p><strong>Type de transaction :</strong></p>
@@ -72,6 +79,7 @@
 
             <button type="submit" class="btn btn-primary mt-3">Ajouter</button>
         </form>
+
 
         <div class="mt-4">
             <a href="/modifier_personne/{{ personne.mail }}" class="btn btn-warning">Modifier personne</a>

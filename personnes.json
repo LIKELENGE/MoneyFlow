@@ -1,159 +1,25 @@
 [
     {
-        "nom": "test",
-        "prenom": "test",
-        "mail": "test@test.com",
+        "nom": "COOPER",
+        "prenom": "Sheldon",
+        "mail": "scooper@gmail.com",
         "sexe": "M",
-        "date_naissance": "2005-10-10",
-        "mp": "test@test.com",
+        "date_naissance": "1991-10-28",
+        "mp": "scooper@gmail.com",
         "depenses": [
             {
-                "montant": "144",
-                "date": "2025-05-04",
-                "description": "test"
-            },
-            {
-                "montant": "144",
-                "date": "2025-05-04",
-                "description": "test"
-            },
-            {
-                "montant": 144.0,
-                "date": "2025-05-04",
-                "description": "test"
-            },
-            {
-                "montant": "8",
-                "date": "2025-05-04",
+                "id": "714d9ade-a31b-41c7-af60-0347a701d2b5",
+                "montant": 10.0,
+                "date": "2024-10-10",
                 "description": "test"
             }
         ],
         "revenus": [
             {
-                "montant": "100",
-                "date": "2025-05-04",
+                "id": "47cf449f-1c1c-47b2-b408-69cbc2fc709e",
+                "montant": 1000.0,
+                "date": "2024-10-10",
                 "description": "test"
-            },
-            {
-                "montant": "250",
-                "date": "20024-01-01",
-                "description": "test"
-            },
-            {
-                "montant": "250",
-                "date": "20024-01-01",
-                "description": "test"
-            },
-            {
-                "montant": "200",
-                "date": "2025-05-04",
-                "description": "test"
-            },
-            {
-                "montant": "120",
-                "date": "2025-05-04",
-                "description": "test"
-            },
-            {
-                "montant": "120",
-                "date": "2025-05-04",
-                "description": "test"
-            },
-            {
-                "montant": "120",
-                "date": "2025-05-04",
-                "description": "test"
-            },
-            {
-                "montant": 155.0,
-                "date": "1997-10-20",
-                "description": "test"
-            },
-            {
-                "montant": 155.0,
-                "date": "1997-10-20",
-                "description": "test"
-            },
-            {
-                "montant": 155.0,
-                "date": "1997-10-20",
-                "description": "test"
-            },
-            {
-                "montant": 5000.0,
-                "date": "2025-05-04",
-                "description": "lotto"
-            },
-            {
-                "montant": 5000.0,
-                "date": "2025-05-04",
-                "description": "lotto"
-            },
-            {
-                "montant": 5000.0,
-                "date": "2025-05-04",
-                "description": "lotto"
-            },
-            {
-                "montant": 5000.0,
-                "date": "2025-05-04",
-                "description": "lotto"
-            },
-            {
-                "montant": 25.0,
-                "date": "2025-05-04",
-                "description": "test"
-            },
-            {
-                "montant": 11.0,
-                "date": "2025-05-04",
-                "description": "test"
-            },
-            {
-                "montant": "5",
-                "date": "2025-05-02",
-                "description": "test"
-            }
-        ]
-    },
-    {
-        "nom": "Doe",
-        "prenom": "John",
-        "mail": "johndoe@gmail.com",
-        "sexe": "M",
-        "date_naissance": "1960-10-28",
-        "mp": "johndoe@gmail.com",
-        "depenses": [],
-        "revenus": []
-    },
-    {
-        "nom": "BAUER",
-        "prenom": "Jack",
-        "mail": "jackbauer@gmail.com",
-        "sexe": "M",
-        "date_naissance": "1985-01-10",
-        "mp": "jackbauer@gmail.com",
-        "depenses": [],
-        "revenus": []
-    },
-    {
-        "nom": "TOTO",
-        "prenom": "joe",
-        "mail": "tjoe@gmail.com",
-        "sexe": "F",
-        "date_naissance": "1990-05-10",
-        "mp": "tjoe@gmail.com",
-        "depenses": [],
-        "revenus": [
-            {
-                "montant": "10000",
-                "date": "2025-05-04",
-                "description": "Revenu initial"
-            },
-            {
-                "montant": "10000",
-                "date": "2025-05-04",
-                "description": "Revenu initial"
             }
         ]
     }
